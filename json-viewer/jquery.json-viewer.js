@@ -68,6 +68,10 @@
         html += '[<ol class="json-array">';
         for (var i = 0; i < json.length; ++i) {
           html += '<li>';
+          // Optionally show the index for array items
+          if (options.withIndex) {
+            html += '<span class="json-index">' + i + '</span> ';
+          }
           // Add toggle button if item is collapsable
           if (isCollapsable(json[i])) {
             html += '<a href class="json-toggle"></a>';
@@ -137,6 +141,7 @@
       rootCollapsable: true,
       withQuotes: false,
       withLinks: true,
+      withIndex: false,
       bigNumbers: false
     }, options);
 
