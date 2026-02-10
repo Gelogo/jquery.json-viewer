@@ -17,6 +17,11 @@ ul.json-dict, ol.json-array {
   color: #1A01CC;
   font-weight: bold;
 }
+.json-index {
+  color: inherit;
+  font-weight: normal;
+  margin-right: 0.9em;
+}
 
 /* Toggle button */
 a.json-toggle {
