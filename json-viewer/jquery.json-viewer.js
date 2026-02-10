@@ -98,9 +98,9 @@
               // define a parameter of the json value first to prevent get null from key when the key changed by the function `htmlEscape(key)`
               let jsonElement = json[key];
               key = htmlEscape(key);
-              var keyRepr = options.withQuotes ?
-                '<span class="json-string">"' + key + '"</span>' : key;
-
+              var keyRepr = options.withQuotes
+                ? '<span class="json-key json-string">"' + key + '"</span>'
+                : '<span class="json-key">' + key + '</span>';
               html += '<li>';
               // Add toggle button if item is collapsable
               if (isCollapsable(jsonElement)) {
